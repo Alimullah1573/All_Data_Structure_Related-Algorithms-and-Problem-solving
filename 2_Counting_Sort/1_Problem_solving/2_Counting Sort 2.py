@@ -3,10 +3,7 @@
 # Solution
 
 def countingSort(arr):
-    count_arr = [0]*100
-    for i in arr:
-        count_arr[i] +=1
-
-    for i in range(1,100):
-        count_arr[i] += count_arr[i-1]
-    return count_arr
+    res = []
+    for i in range(max(arr) + 1):
+        res += arr.count(i) * [i]
+    return res
